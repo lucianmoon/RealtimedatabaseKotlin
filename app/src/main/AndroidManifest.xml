@@ -9,19 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RealtimedatabaseKotlin">
-        <activity android:name=".UpdateData">
+        <activity
+            android:name=".UserListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateData"
+            android:exported="true" />
+        <activity
+            android:name=".ScannerUpdate"
+            android:exported="true" />
+        <activity android:name=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
-        <activity android:name=".ReadData">
-
-        </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ReadData" />
+        <activity android:name=".AddData" />
     </application>
 
 </manifest>

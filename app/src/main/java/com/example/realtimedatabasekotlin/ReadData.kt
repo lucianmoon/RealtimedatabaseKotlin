@@ -16,10 +16,20 @@ class ReadData : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityReadDataBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val username = intent.getStringExtra("Username")
+        val userName : String = username.toString()
+        if  (userName.isNotEmpty()){
 
+            readData(userName)
+
+        }else{
+
+            Toast.makeText(this,"PLease enter the Username",Toast.LENGTH_SHORT).show()
+
+        }
+        binding.etusername.setText(username)
         binding.readdataBtn.setOnClickListener {
 
-            val userName : String = binding.etusername.text.toString()
             if  (userName.isNotEmpty()){
 
                 readData(userName)
@@ -44,8 +54,9 @@ class ReadData : AppCompatActivity() {
                 val firstname = it.child("firstName").value
                 val lastName = it.child("lastName").value
                 val age = it.child("age").value
+                val username = it.child("userName").value.toString()
                 Toast.makeText(this,"Successfuly Read",Toast.LENGTH_SHORT).show()
-                binding.etusername.text.clear()
+                binding.etusername.setText(username)
                 binding.tvFirstName.text = firstname.toString()
                 binding.tvLastName.text = lastName.toString()
                 binding.tvAge.text = age.toString()
@@ -68,3 +79,5 @@ class ReadData : AppCompatActivity() {
 
     }
 }
+
+

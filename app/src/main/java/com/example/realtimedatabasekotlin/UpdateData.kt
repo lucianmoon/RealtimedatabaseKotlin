@@ -1,5 +1,6 @@
 package com.example.realtimedatabasekotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -16,7 +17,17 @@ class UpdateData : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityUpdateDataBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val username = intent.getStringExtra("Username")
+        val userName : String = username.toString()
+        if  (userName.isNotEmpty()){
 
+            readData(userName)
+
+        }else{
+
+            Toast.makeText(this,"PLease enter the Username",Toast.LENGTH_SHORT).show()
+
+        }
         binding.updateBtn.setOnClickListener {
 
             val userName = binding.userName.text.toString()
@@ -25,7 +36,9 @@ class UpdateData : AppCompatActivity() {
             val age = binding.age.text.toString()
 
             updateData(userName,firstName,lastName,age)
-
+            Intent(this,ScannerUpdate::class.java).also{
+                startActivity(it)
+            }
         }
 
     }
@@ -52,5 +65,40 @@ class UpdateData : AppCompatActivity() {
 
             Toast.makeText(this,"Failed to Update",Toast.LENGTH_SHORT).show()
 
-        }}
+        }
+    }
+    private fun readData(userName: String) {
+
+        database = FirebaseDatabase.getInstance().getReference("Users")
+        database.child(userName).get().addOnSuccessListener {
+
+            if (it.exists()){
+
+                val firstname = it.child("firstName").value.toString()
+                val lastName = it.child("lastName").value.toString()
+                val age = it.child("age").value.toString()
+                val username = it.child("userName").value.toString()
+                Toast.makeText(this,"Successfuly Read",Toast.LENGTH_SHORT).show()
+                binding.userName.setText(username)
+                binding.firstName.setText(firstname)
+                binding.lastname.setText(lastName)
+                binding.age.setText(age)
+
+            }else{
+
+                Toast.makeText(this,"User Doesn't Exist",Toast.LENGTH_SHORT).show()
+
+
+            }
+
+        }.addOnFailureListener{
+
+            Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
+
+
+        }
+
+
+
+    }
 }

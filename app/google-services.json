@@ -1,34 +1,92 @@
 {
   "project_info": {
-    "project_number": "317372142110",
-    "firebase_url": "https://relatimedatabase-eee95-default-rtdb.firebaseio.com",
-    "project_id": "relatimedatabase-eee95",
-    "storage_bucket": "relatimedatabase-eee95.appspot.com"
+    "project_number": "732805928411",
+    "firebase_url": "https://realtimedbkt-default-rtdb.firebaseio.com",
+    "project_id": "realtimedbkt",
+    "storage_bucket": "realtimedbkt.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:317372142110:android:9542e39ba6c79a584a540f",
+        "mobilesdk_app_id": "1:732805928411:android:501cb00175658f854c83fe",
         "android_client_info": {
-          "package_name": "com.example.realtimedatabasekotlin"
+          "package_name": "com.example.firebaserecyclerviewkotlin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "317372142110-kn7ao84mhf6glmdtdtdh2t2ubbgnndj1.apps.googleusercontent.com",
+          "client_id": "732805928411-d0dk05l5fe0qfn70pheiqnj0o6860r6a.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDohCuro_SyBBSUBxKq-90i5jADH1N-D9U"
+          "current_key": "AIzaSyB4OH_PUm6N-8XoRGKZJ5SgxYJJPptZeTQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "317372142110-kn7ao84mhf6glmdtdtdh2t2ubbgnndj1.apps.googleusercontent.com",
+              "client_id": "732805928411-d0dk05l5fe0qfn70pheiqnj0o6860r6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732805928411:android:cf96e8d22d201e7e4c83fe",
+        "android_client_info": {
+          "package_name": "com.example.realtimedatabasekotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732805928411-d0dk05l5fe0qfn70pheiqnj0o6860r6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4OH_PUm6N-8XoRGKZJ5SgxYJJPptZeTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732805928411-d0dk05l5fe0qfn70pheiqnj0o6860r6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732805928411:android:7aaf47c9b8477b4f4c83fe",
+        "android_client_info": {
+          "package_name": "my.edu.tarc.realtimedbkt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732805928411-d0dk05l5fe0qfn70pheiqnj0o6860r6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4OH_PUm6N-8XoRGKZJ5SgxYJJPptZeTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732805928411-d0dk05l5fe0qfn70pheiqnj0o6860r6a.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
